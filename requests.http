@@ -1,1 +1,11 @@
 get http://localhost:3000/pets.json
+
+###
+post http://localhost:3000/pets.json
+Content-Type: application/json
+
+{
+  "name": "Fido",
+  "animal": "dog",
+  "age": 9
+}
