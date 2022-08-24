@@ -6,8 +6,11 @@ class PetsController < ApplicationController
 
   def create
     pet = Pet.new(name: params[:name], animal: params[:animal], age: params[:age])
-    pet.save
-    render json: pet.as_json
+    if pet.save
+      render json: pet.as_json
+    else
+      render json: {errors: pet.errors.full_messages }, status: 422
+    end
   end
 
   def update
