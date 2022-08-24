@@ -9,3 +9,13 @@ Content-Type: application/json
   "animal": "dog",
   "age": 9
 }
+
+###
+patch http://localhost:3000/pets/4.json
+Content-Type: application/json
+
+{
+  "name": "Billy",
+  "animal": "dog",
+  "age": 6
+}

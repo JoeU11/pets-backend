@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get "/pets" => "pets#index"
 
   post "/pets" => "pets#create"
+
+  patch "/pets/:id" => "pets#update"
 end

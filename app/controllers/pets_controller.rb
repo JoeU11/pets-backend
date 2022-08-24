@@ -9,4 +9,13 @@ class PetsController < ApplicationController
     pet.save
     render json: pet.as_json
   end
+
+  def update
+    pet = Pet.find_by(id: params[:id])
+    pet.name = params[:name] || pet.name
+    pet.animal = params[:animal] || pet.animal
+    pet.age = params[:age] || pet.age
+    pet.save
+    render json: pet.as_json
+  end
 end
