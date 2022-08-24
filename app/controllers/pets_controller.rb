@@ -18,4 +18,10 @@ class PetsController < ApplicationController
     pet.save
     render json: pet.as_json
   end
+
+  def destroy
+    pet = Pet.find_by(id: params[:id])
+    pet.destroy
+    render json: {message: "this pet has been removed"}    
+  end
 end

@@ -19,3 +19,6 @@ Content-Type: application/json
   "animal": "dog",
   "age": 6
 }
+
+###
+delete http://localhost:3000/pets/6.json
